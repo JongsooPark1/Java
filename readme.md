@@ -1,4 +1,4 @@
-## JavaScript
+## Java
 ---
 * [Study](./study)
 
