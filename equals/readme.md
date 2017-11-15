@@ -10,7 +10,7 @@ String b = "aaa";
 String c = new String("aaa");
 ```
 
-위의 a, b, c는 모두 will을 담고 있지만 아래와 같은 차이를 보인다
+위의 a, b, c는 모두 "aaa"을 담고 있지만 아래와 같은 차이를 보인다
 
 ![image](./image.png)
 
