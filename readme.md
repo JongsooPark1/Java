@@ -1,5 +1,5 @@
 ## Java
 ---
-* [Study](./study)
+* [Study](./stu)
 
 * [Project](./project)
