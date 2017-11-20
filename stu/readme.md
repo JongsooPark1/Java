@@ -4,6 +4,8 @@
 
 * [static](./static)
 
+* [static2](./static2)
+
 * [.equals()와 ==의 차이](./equals)
 
 * [and others](./and%20others)
