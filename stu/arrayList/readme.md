@@ -39,4 +39,10 @@ list.remove("3");
 
 // 원소 집어넣기
 List<Integer> another = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+// 값 존재 여부 확인, return은 true or false
+list.contains(1);
+
+// list중 1번 index부터 2번 index전까지 빼낸 값을 list로 return
+list.sublist(1,2);
 ```
