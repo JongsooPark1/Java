@@ -36,4 +36,7 @@ list.remove(2);
 
 // "3" 객체 삭제
 list.remove("3");
+
+// 원소 집어넣기
+List<Integer> another = Arrays.asList(1, 2, 3, 4, 5, 6);
 ```
