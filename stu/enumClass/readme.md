@@ -82,9 +82,9 @@ public class Shoes {
         shoes.size = 230;
         shoes.type = Type.RUNNING;
 
-        System.out.plintln("신발 이름 = " + shoes.name);
-        System.out.plintln("신발 사이즈 = " + shoes.size);
-        System.out.plintln("신발 종류 = " + shoes.type);
+        System.out.println("신발 이름 = " + shoes.name);
+        System.out.println("신발 사이즈 = " + shoes.size);
+        System.out.println("신발 종류 = " + shoes.type);
     }
 }
 ```
@@ -189,7 +189,7 @@ WALKING
 
 WALKING
 
-### 값 가져오는 방법
+< 값 가져오는 방법 >
 
 * enum 형 객체를 만들어서 값 가져오기 -> Type.WALKING;
 
