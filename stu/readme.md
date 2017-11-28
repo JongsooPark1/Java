@@ -14,6 +14,6 @@
 
 * [ArrayList](./arrayList)
 
-* [and others](./and%20others)
+* [enum 클래스](./enumClass)
 
-* 
+* [and others](./and%20others)
