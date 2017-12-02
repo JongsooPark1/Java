@@ -49,5 +49,4 @@ public class StaticMemberEx01 {
 		System.out.println(sm2.print()); // a : 3, b : 4
 	}
 }
-[출처] [JAVA/자바] 정적 멤버(필드, 메소드)와 static|작성자 JOKER
 ```
