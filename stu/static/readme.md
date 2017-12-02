@@ -24,3 +24,30 @@ a.field;
 static이 붙어 있는 method는 인스턴스를 만들지 않고 사용할 수 있다
 
 붙어 있지 않은 method는 인스턴스를 만들고 사용해야 한다
+
+3. 예제
+
+```java
+public class StaticMemberEx01 {
+	static int a; // 정적 필드
+	int b; // 인스턴스 필드
+	StaticMemberEx01(int a, int b){
+		this.a = a; // 매개값 할당
+		this.b = b; // 매개값 할당
+	}
+	public String print(){
+		String value = "a : " + a + ", b : " + b;
+		return value;
+	}
+
+	public static void main(String[] args) {
+		StaticMemberEx01 sm = new StaticMemberEx01(1, 2);
+		StaticMemberEx01 sm1 = new StaticMemberEx01(2, 3);
+		StaticMemberEx01 sm2 = new StaticMemberEx01(3, 4);
+		System.out.println(sm.print()); // a : 3, b : 2
+		System.out.println(sm1.print()); // a : 3, b : 3
+		System.out.println(sm2.print()); // a : 3, b : 4
+	}
+}
+[출처] [JAVA/자바] 정적 멤버(필드, 메소드)와 static|작성자 JOKER
+```
