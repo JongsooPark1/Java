@@ -16,4 +16,6 @@
 
 * [enum 클래스](./enumClass)
 
+* [상속](./extends)
+
 * [and others](./and%20others)
