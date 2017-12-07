@@ -12,7 +12,7 @@ A.field;
 ```
 A a = new A();
 a.method;
-a.field;
+a.field; 
 ```
 
 2. 정적 멤버에서 인스턴스 멤버를 사용하는 경우
