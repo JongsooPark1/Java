@@ -45,4 +45,7 @@ list.contains(1);
 
 // list중 1번 index부터 2번 index전까지 빼낸 값을 list type으로 return
 list.sublist(1,2);
+
+// 초기 크기 설정하고 싶은 경우
+List<Integer> list = Arrays.asList(new Integer[10]);
 ```
