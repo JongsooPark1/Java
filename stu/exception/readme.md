@@ -11,7 +11,7 @@
 
 ### Hierarchy
 
-[!hierarchy](./hierarchy.png)
+![hierarchy](./hierarchy.png)
 
 ### RuntimeException
 
