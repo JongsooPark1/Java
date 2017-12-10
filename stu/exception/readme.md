@@ -15,19 +15,19 @@
 
 ### RuntimeException
 
-###### NullPointerException
+##### NullPointerException
 
 객체 참조가 없는 상태에서 사용할 경우
 
-###### ArrayIndexOutOfBoundsException
+##### ArrayIndexOutOfBoundsException
 
 배열에서 인덱스 범위를 초과하여 사용할 경우
 
-###### NumberFormatException
+##### NumberFormatException
 
 문자열을 숫자로 변환할 때, 숫자로 변활될 수 없는 문자가 포함되어 있는 경우
 
-###### ClassCastException
+##### ClassCastException
 
 타입 변환이 불가능함에도 시도하는 경우
 
@@ -120,11 +120,11 @@ try {
 
 ### 예외 정보 얻기
 
-###### getMessage()
+##### getMessage()
 
 예외를 발생시킬 때 String 타입의 메세제를 갖는 생성자를 이용하였다면, 메세지는 자동적으로 예외 객체 내부에 저장된다. 그렇기 때문에 catch 블록에서 getMessage()의 리턴값 확인 가능하다
 
-###### printStackTrace()
+##### printStackTrace()
 
 예외 발생 코드를 추적해서 모두 콘솔에 출력한다
 
