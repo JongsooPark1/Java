@@ -105,7 +105,7 @@ public class MyException extends Exception {
 * 예외 발생 시키기
 
 ```java
-public void method() throw MyException {
+public void method() throws MyException {
   throw new MyException("메세지");
 }
 ```
