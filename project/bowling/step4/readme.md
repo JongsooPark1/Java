@@ -1,7 +1,9 @@
-## lotto-step4
+## bowling-step4
 ---
 
-> 플레이어 인원 설정하는 기능 추가
+### requirement
+
+플레이어 인원 설정하는 기능 추가
 
 ### output
 

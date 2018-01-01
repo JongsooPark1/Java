@@ -1,7 +1,9 @@
 ## bowling-step2
 ---
 
-> 예외 처리 추가
+### requirement
+
+예외 처리 추가
 
 ### output
 ```

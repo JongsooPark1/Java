@@ -1,7 +1,9 @@
-## lotto-step3
+## bowling-step3
 ---
 
-> 스코어 합산 기능 추가
+### requirement
+
+예외 처리 추가
 
 ### output
 
