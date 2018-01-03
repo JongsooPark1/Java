@@ -1,16 +1,16 @@
-## interface
+## Interface
 ---
 
 >  객체의 사용 방법을 정의한 타입으로 다형성을 구현하는데 중요한 역할을 한다
 
 ### 구성
 
-#### 상수 필드
+##### 상수 필드
 
 
 인터페이스에 선언된 필드는 모두 상수이며, public static final의 특성을 갖는다
 
-#### 메소드
+##### 메소드
 
 1. Abstract method
 
@@ -61,6 +61,127 @@ public class RemoteControlExample {
     rc.setMute();   // 디폴트 메소드
 
     RemoteControl.changeBattery();    // 정적 메소드
+  }
+}
+```
+
+### 자동 타입 변환(Promotion)
+
+인터페이스 : A / 구현 클래스 : B, C / 자식 클래스 : D, E
+
+```java
+A a1 = new B();
+A a2 = new C();
+A a3 = new D();
+A a4 = new E();
+```
+
+구현 객체가 인터페이스 타입으로 변환되는 것
+
+인터페이스 구현 클래스를 상속해서 자식 클래스를 만들었다면 자식 객체 역시 인터페이스 타입으로 자동 타입 변환시킬 수 있다
+
+### 필드의 다형성
+
+interface
+```java
+public interface Tire {
+  public void roll();
+}
+```
+구현 객체 1
+```java
+public class KumhoTire implements Tire {
+  @Override
+  roll () {
+    System.out.println("금호 타이어가 굴러갑니다");
+  }
+}
+```
+구현 객체 2
+```java
+public class HankookTire implements Tire {
+  @Override
+  roll () {
+    System.out.println("한국 타이어가 굴러갑니다");
+  }
+}
+```
+Car 객체 (필드 다형성)
+```java
+public class Car {
+  Tire frontLeftTire = new KumhoTire();
+  Tire frontRightTire = new KumhoTire();
+  Tire backLeftTire = new KumhoTire();
+  Tire blackRightTire = new KumhoTire();
+}
+
+public void run() {
+  frontLeftTire.roll();
+  frontRightTire.roll();
+  backLeftTire.roll();
+  backRightTire.roll();
+}
+```
+
+Main
+```java
+public class Main {
+  public static void main(String[] args) {
+    Car myCar = new Car();
+    myCar.run();
+    myCar.frontLeftTire = new HankookTire();
+    myCar.frontRightTire = new HankookTire();
+    myCar.run();
+  }
+}
+```
+출력 결과
+```
+금호타이어가 달려갑니다
+금호타이어가 달려갑니다
+금호타이어가 달려갑니다
+금호타이어가 달려갑니다
+한국타이어가 달려갑니다
+한국타이어가 달려갑니다
+금호타이어가 달려갑니다
+금호타이어가 달려갑니다
+```
+
+### 강제 타입 변환 (Casting)
+
+구현 객체가 인터페이스 타입으로 자동 변환하면, 인터페이스에 선언된 메소드만 사용 가능하다는 제약 사항이 따른다. 이때 강제 타입 변환을 통해 다시 구현 클래스로 변환 후, 구현 클래스의 필드와 메소드를 사용할 수 있다
+
+interface
+```java
+public interface Vehicle {
+  public void run();
+}
+```
+
+구현 객체
+```java
+public class Bus implements Vehicle {
+  @Override
+  public void run() {
+    System.out.println("버스가 달립니다");
+  }
+
+  public void checkFare() {
+    System.out.println("승차요금을 체크합니다");
+  }
+}
+```
+
+Main
+```java
+public class Main {
+  public static void main(String[] args) {
+    Vehicle vehicle = new Bus();
+    vehicle.run();
+    //vehicle.checkFare(); 불가능
+    Bus bus = (Bus) vehicle;
+    bus.run();
+    bus.vehicle();  // 가능
   }
 }
 ```
