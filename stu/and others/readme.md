@@ -33,7 +33,7 @@ static int getHowManyManual() {
 
 ### import static utils.StringUtils.appendNewLine;
 
-이는 utils 패키지의 StringUtils 클래스에 있는 appendNewLine을 다른 패키지 또는 다른 클래스에서 자유롭게 사용할 수 있게 한다
+이는 utils 패키지의 StringUtils 클래스에 있는 appendNewLine 메소드를 다른 패키지 또는 다른 클래스에서 자유롭게 사용할 수 있게 한다
 
 ### StringBuilder
 
