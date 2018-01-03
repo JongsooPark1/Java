@@ -1,13 +1,66 @@
-### interface
+## interface
 ---
 
->  
+>  객체의 사용 방법을 정의한 타입으로 다형성을 구현하는데 중요한 역할을 한다
+
+### 구성
+
+#### 상수 필드
 
 
+인터페이스에 선언된 필드는 모두 상수이며, public static final의 특성을 갖는다
+
+#### 메소드
+
+1. Abstract method
+
+2. Default method (java 8 추가)
+
+default 키워드가 리턴 타입 앞에 붙는다. interface에 선언되지만 사실은 구현 객체가 가지고 있는 instance method라고 생각해야 한다. 존재 이유는 기존 interface를 확장해서 새로운 기능을 추가하기 위해서
+
+```java
+default void setMute(boolean mute) {
+  if (mute) {
+    System.out.println("무음 처리합니다");
+  } else {
+    System.out.println("무음 해제합니다");
+  }
+}
+```
+
+3. Static method (java 8 추가)
+
+### 구현 클래스
+
+interface에 선언된 abstract method에 대응하는 실체 method를 구현 클래스가 작성하지 않으면, 구현 클래스는 자동적으로 추상 클래스가 된다. 그렇기 때문에 클래스 선언부에 abstract 키워드를 추가해야 한다
 
 
+### 익명 구현 객체
 
+소스 파일을 만들지 않고도 구현 객체를 만들 수 있는 방법을 제공한다. 람다식은 interface의 익명 구현 객체를 만들기 때문에 코드 패턴을 잘 익혀 둘 필요 있다. 하나의 실행문이므로 끝에는 세미콜론(;) 반드시 필요하다
 
+```java
+인터페이스 변수 = new 인터페이스() {
+  // 인터페이스에 선언된 추상 메소드의 실체 메소드
+};
+```
 
+### interface 사용
 
-  
+interface로 구현 객체를 사용하려면 변수를 선언하고 구현 객체를 대입해야 한다. 인터페이스 변수는 참조 타입이기 때문에 구현 객체가 대입될 경우 구현 객체의 번지를 저장한다. abstract method, default method 모두 객체를 대입해야 사용할 수 있고, static method는 인터페이스로 바로 호출이 가능하다
+
+```java
+public class RemoteControlExample {
+  public static void main(String[] args) {
+    RemoteControl rc;
+    rc = new Televiwion();
+    rc.turnOn();    // 추상 메소드
+
+    rc = new Audio();
+    rc.turnOn();    // 추상 메소드
+    rc.setMute();   // 디폴트 메소드
+
+    RemoteControl.changeBattery();    // 정적 메소드
+  }
+}
+```
