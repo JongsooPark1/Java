@@ -1,7 +1,7 @@
 ## and others
 ---
 
-1. nextInt() 사용시 주의할 점
+### nextInt() 사용시 주의할 점
 
 * 기존 code
 
@@ -26,16 +26,16 @@ static int getHowManyManual() {
 	}
 ```
 
-2. System.getProperty("line.separator")
+### System.getProperty("line.separator")
 
 운영 체제에 따라 개행 문자는 달라질 수 있다. 따라서 위와 같은 명령어를 이용한다
 
 
-3. import static utils.StringUtils.appendNewLine;
+### import static utils.StringUtils.appendNewLine;
 
 이는 utils 패키지의 StringUtils 클래스에 있는 appendNewLine을 다른 패키지 또는 다른 클래스에서 자유롭게 사용할 수 있게 한다
 
-4. StringBuilder
+### StringBuilder
 
 ```java
 StringBuilder sb = new StringBuilder();
