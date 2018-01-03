@@ -47,7 +47,7 @@ public class CalculatorTest {
 }
 ```
 
-#### Annotation 활용
+### Annotation 활용
 
 @Before : 테스트 전 단계로 각 테스트 전에 실행
 
@@ -55,7 +55,7 @@ public class CalculatorTest {
 
 @After : 테스트를 마친 후 실행
 
-#### 이용하는 메소드
+### 이용하는 메소드
 
 assertEquals : 메소드의 값을 직접 입력해 비교
 
