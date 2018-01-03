@@ -16,7 +16,7 @@
 
 2. Default method (java 8 추가)
 
-default 키워드가 리턴 타입 앞에 붙는다. interface에 선언되지만 사실은 구현 객체가 가지고 있는 instance method라고 생각해야 한다. 존재 이유는 기존 interface를 확장해서 새로운 기능을 추가하기 위해서
+default 키워드가 리턴 타입 앞에 붙는다. interface에 선언되지만 사실은 구현 객체가 가지고 있는 instance method라고 생각해야 한다. 존재 이유는 기존 interface를 확장해서 새로운 기능을 추가하기 위해서. 예를 들어 기존의 방법으론 나중에 interface에 메소드를 추가 할 경우, 구현 클래스에도 새로운 메소드를 추가해야 컴파일 에러 발생하지 않는다. 하지만 default method로 추가한다면 구현 클래스에 추가하지 않아도 에러가 발생하지 않는다
 
 ```java
 default void setMute(boolean mute) {
@@ -185,3 +185,36 @@ public class Main {
   }
 }
 ```
+
+### 객체 타입 확인
+
+어떤 구현 객체가 자동 타입 변환 되어 있는지 알 수 없는 상태에서 강제 타입 변환을 할 경우 ClassCastException발생. 따라서 객체 타입을 확인한다
+
+example
+```java
+public void drive(Vehicle vehicle) {
+  if (vehicle instanceof Bus) {
+    Bus bus = (Bus) vehicle;
+  }
+  bus.checkFare();
+}
+```
+
+### 인터페이스 상속
+
+인터페이스는 클래스와 달리 다중 상속을 허용한다
+
+```java
+public interface 하위인터페이스 extends 상위인터페이스1, 상위인터페이스2 {
+  ...
+}
+```
+
+하위 인터페이스를 구현하는 클래스는 하위 인터페이스의 메소드뿐만 아니라 상위 인터페이스의 모든 추상 메소드에 대한 실체 메소드를 가지고 있어야 한다. 따라서 다음과 같은 변환 가능하다
+
+```java
+하위인터페이스 변수 = new 구현클래스(...);
+상위인터페이스1 변수 = new 구현클래스(...);
+상위인터페이스2 변수 = new 구현클래스(...);
+```
+하위 인터페이스로 변환된 경우 상, 하위 인터페이스 선언된 모든 메소드 사용 가능하지만, 상위 인터페이스로 타입 변환되면 상위 인터페이스에 선언된 메소드만 사용 가능하다
