@@ -1,6 +1,6 @@
 ## Study
 ---
-
+* [[class](./class)
 
 * [static](./static)
 
