@@ -42,7 +42,7 @@ public int hashCode() {
 
 hashCode()와 equals()의 관계
 
-![relation](./hashCode.png)
+![relation](./hashcode.png)
 
 ### 객체 문자 정보, toString()
 
