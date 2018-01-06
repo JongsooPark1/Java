@@ -19,7 +19,7 @@ Object class의 equals() 메소드는 비교 연산자인 ==과 동일한 결과
 @Override
 public boolean equals(Member m2) {
   if (m2 instanceof Member) {
-    if (m1.equals(m2)) {
+    if (id.equals(m2.id)) {
       System.out.println("true");
     }
   }
@@ -32,6 +32,17 @@ public boolean equals(Member m2) {
 두 객체가 같은지 식별한다. Object의 hachCode() 메소드는 객체의 메모리 번지를 이용해서 해시코드를 만들어 정수값을 리턴한다. 객체 비교는 아래의 flow chart 흐름을 따른다. hashCode() 역시 해당 클래스에서 @override를 통해 다르게 정의한다. hashCode()와 equals()는 함께 재정의되어 두 객체의 동등 비교를 할 수 있다
 
 ![flowChart](./flow.jpg)
+
+```Java
+@override
+public int hashCode() {
+  return id.hashCode();
+}
+```
+
+hashCode()와 equals()의 관계
+
+![relation](./hashCode.png)
 
 ### 객체 문자 정보, toString()
 
