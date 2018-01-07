@@ -44,7 +44,7 @@ hashCode()와 equals()의 관계
 
 * equals 는 두 객체의 내용이 같은지, 동등성(equality) 를 비교하는 연산자
 * hashCode 는 두 객체가 같은 객체인지, 동일성(identity) 를 비교하는 연산자
- 
+
 
 출처: http://anster.tistory.com/160 [Old Lisper]
 
