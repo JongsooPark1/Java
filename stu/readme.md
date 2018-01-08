@@ -28,6 +28,6 @@
 
 * [Object](./object)
 
-* [and others](./and%20others)
+* [String](./string)
 
-*
+* [and others](./and%20others)
