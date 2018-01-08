@@ -47,5 +47,6 @@ list.contains(1);
 list.sublist(1,2);
 
 // 초기 크기 설정하고 싶은 경우
+// 용량(capacity) : 초기 크기, 10으로 설정되어 있으며, arrayList의 크기가 10 이상이 되는 순간 부터 다시 10 단위로 커진다
 List<Integer> list = Arrays.asList(new Integer[10]);
 ```
