@@ -9,4 +9,4 @@ public interface 하위인터페이스 extends 상위인터페이스1, 상위인
 }
 ```
 
-2. abstract class는 class이기 때문에 구현 할 때에 extends라는 표현을 쓰고, iterface는 implements를 사용한다
+2. abstract class는 class이기 때문에 구현 할 때에 extends라는 표현을 쓰고, interface는 implements를 사용한다
