@@ -30,6 +30,8 @@ static int getHowManyManual() {
 
 운영 체제에 따라 개행 문자는 달라질 수 있다. 따라서 위와 같은 명령어를 이용한다
 
+안될시, \r\n or (\r ? \n) or (\\r ? \\n) 사용해보기
+
 
 ### import static utils.StringUtils.appendNewLine;
 
