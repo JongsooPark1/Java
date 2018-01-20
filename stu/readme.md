@@ -28,8 +28,6 @@
 
 * [Object](./object)
 
-* [String](./string)
+* [lambda](./lambda)
 
 * [and others](./and%20others)
-
- 
