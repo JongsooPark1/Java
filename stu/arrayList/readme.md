@@ -37,8 +37,11 @@ list.remove(2);
 // "3" 객체 삭제
 list.remove("3");
 
-// 원소 집어넣기
+// 배열 집어 넣기
 List<Integer> another = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+// 리스트 집어 넣기
+list.addAll(anotherList);
 
 // 값 존재 여부 확인, return은 true or false
 list.contains(1);
@@ -47,7 +50,13 @@ list.contains(1);
 list.sublist(1,2);
 
 // 정렬, 오름차순
-Collenctions.sort(list);
+Collections.sort(list);
+
+// 최대값
+Collections.max(list);
+
+// 최소값
+Collections.min(list);
 
 // 초기 크기 설정하고 싶은 경우
 // 용량(capacity) : 초기 크기, 10으로 설정되어 있으며, arrayList의 크기가 10 이상이 되는 순간 부터 다시 10 단위로 커진다
