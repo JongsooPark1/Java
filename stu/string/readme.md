@@ -1,14 +1,14 @@
-## String
+## String & StringBuilder
 ---
 
-> string method 익히기
+> String과 StringBuilder method 익히기
 
-### string method
+### string methods
 
 ```java
 String str = "";
 
-// 아래의 api를 적용해도 str은 변하지 않는다
+// 아래의 method를 적용해도 str은 변하지 않는다
 // 예를 들어 문자열을 변환한 값을 그대로 유지하고 싶다면 str = str.replace("oldStr", "newStr")으로 해야한다
 
 
@@ -74,5 +74,39 @@ str.contains("anotherStr");
 // 문자, int로 강제 변환하면 ascii 넘버로 출력된다
 char ch = 'a';
 System.out.println((int) ch);
+
+```
+
+### StringBuilder methods
+
+> StringBuffer과 사용법은 동일하지만 multi thread에서 동기화 처리가 되지 않아 속도가 빠르다는 차이점이 있다. 따라서 StringBuilder를 사용하기로 한다
+
+```java
+StringBuilder sb = new StringBuilder("str");
+
+// 아래의 method 적용하면 sb가 바뀜
+
+// 문자열 뒤에 추가
+sb.append("anotherStr");
+
+// 문자열 삭제
+sb.delete(시작 index, 끝 index + 1);
+
+// 문자 삭제, delete로도 가능. sb.delete(index, index + 1);
+sb.deleteCharAt(해당 index);
+
+// 문자열 변환
+sb.replace(시작 index, 끝 index + 1, anotherStr);
+
+// 문자 치환, replace로도 가능. sb.replace(index, index + 1, anotherStr);
+sb.setChar(해당 index, 'anotherChar');
+
+// 문자열 뒤집기
+sb.reverse();
+
+// 문자열 삽입하기
+sb.insert(시작 index, "anotherStr");
+
+// 이외의 메소드 length(), indexOf() 등 String과 겹치는 것들이 많다.
 
 ```
