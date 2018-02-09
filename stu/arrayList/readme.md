@@ -58,7 +58,7 @@ Collections.max(list);
 // 최소값
 Collections.min(list);
 
-// 값 초기화
+// 값 초기화. 배열에선 Arrays.fill(arr, obj);
 Collections.fill(list, obj);
 
 // 초기 크기 설정하고 싶은 경우
