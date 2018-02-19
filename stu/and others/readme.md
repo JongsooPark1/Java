@@ -50,6 +50,21 @@ System.out.println(sb);
 
 즉, StringBuilder를 생성하면 append와 같은 여러 String 조작 메소드 및 필드를 사용할 수 있다
 
+### Queue
+
+```Java
+Queue<Integer> q = new LinkedList<>();
+
+// 삽입
+q.offer(1);
+
+// 빼기(선입선출)
+q.poll();
+
+// 보기(먼저 들어간 것 부터), queue에서 제거되지는 않는다. poll()과의 차이
+q.peek();
+```
+
 * 참고 사이트
 
 https://msdn.microsoft.com/en-us/library/system.text.stringbuilder.aspx
