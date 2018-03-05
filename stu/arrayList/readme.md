@@ -37,7 +37,7 @@ list.remove(2);
 // "3" 객체 삭제
 list.remove("3");
 
-// 배열 집어 넣기
+// 배열을 list로 변환하기
 List<Integer> another = Arrays.asList(1, 2, 3, 4, 5, 6);
 
 // 리스트 집어 넣기
@@ -58,7 +58,11 @@ Collections.max(list);
 // 최소값
 Collections.min(list);
 
-// 값 초기화. 배열에선 Arrays.fill(arr, obj);
+// 값 초기화. 배열에선 Arrays.fill(arr, obj); 2차원 배열에선 for문 이용한다
+// int[][] no = new int[3][3];
+// for (int temp[] : no) {
+//     			Arrays.fill(temp, -1;
+//     }
 Collections.fill(list, obj);
 
 // 초기 크기 설정하고 싶은 경우

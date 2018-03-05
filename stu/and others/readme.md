@@ -55,13 +55,13 @@ System.out.println(sb);
 ```Java
 Queue<Integer> q = new LinkedList<>();
 
-// 삽입
+// 뒤에서부터 삽입
 q.offer(1);
 
-// 빼기(선입선출)
+// 앞에서부터 하나만 빼기(선입선출)
 q.poll();
 
-// 보기(먼저 들어간 것 부터), queue에서 제거되지는 않는다. poll()과의 차이
+// 앞에서부터 하나만 보기(먼저 들어간 것 부터), queue에서 제거되지는 않는다. poll()과의 차이
 q.peek();
 ```
 
@@ -70,3 +70,42 @@ q.peek();
 https://msdn.microsoft.com/en-us/library/system.text.stringbuilder.aspx
 
 http://www.dreamy.pe.kr/zbxe/CodeClip/158356
+
+### next()와 nextLine()의 차이
+
+※ next()는 개행문자, 공백은 무시하고 문자를 입력받는다
+
+```Java
+Scanner s = new Scanner("\n\ntest\nhoho\n");
+
+while (s.hasNext()) {
+    System.out.println("출력: " + s.next());
+}
+// <결과>
+// 출력: test
+// 출력: hoho
+```
+
+※ nextLine()은 한 줄 단위로 입력받기 때문에 개행문자도 한 줄로 인식한다
+
+```Java
+// nextLine()
+Scanner s = new Scanner("\n\ntest\nhoho\n");
+
+while (s.hasNext()) {
+    System.out.println("출력: " + s.nextLine());
+}
+// <결과>
+// 출력:
+// 출력:
+// 출력: test
+// 출력:
+// 출력: hoho
+// 출력:
+```
+
+### hasNext()와 hasNextLine()의 차이
+
+hasNextLine() checks to see if there is another linePattern in the buffer
+
+hasNext() checks to see if there is a parseable token in the buffer, as separated by the scanner's delimiter
