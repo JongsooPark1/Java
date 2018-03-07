@@ -114,3 +114,7 @@ http://bing9blog.com/java-scanner-next-nextline%EC%B0%A8%EC%9D%B4%EC%99%80-%EC%9
 hasNextLine() checks to see if there is another linePattern in the buffer
 
 hasNext() checks to see if there is a parseable token in the buffer, as separated by the scanner's delimiter
+
+### int의 범위
+
+-10억 ~ 10억
