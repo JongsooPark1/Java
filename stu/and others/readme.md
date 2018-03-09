@@ -118,3 +118,19 @@ hasNext() checks to see if there is a parseable token in the buffer, as separate
 ### int의 범위
 
 -10억 ~ 10억
+
+### 절대값, 반올림, 버림, 올림
+
+```Java
+// 절대값
+Math.abs(value);
+
+// 반올림
+Math.round(value);
+
+// 버림
+Math.ceil(value);
+
+// 올림
+Math.floor(value);
+```
