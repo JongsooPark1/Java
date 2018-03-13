@@ -77,6 +77,16 @@ System.out.println((int) ch);
 
 // 문자열을 문자 배열로 변환
 char[] cha = str.toCharArray();
+
+// 문자열 숫자 변환 가능한지 확인
+public static boolean isNum(String s) {
+    try {
+        Integer.parseInt(s);
+        return true;
+    } catch (NumberFormatException e) {
+        return false;
+    }
+  }
 ```
 
 ### StringBuilder methods
