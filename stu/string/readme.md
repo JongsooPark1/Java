@@ -75,6 +75,8 @@ str.contains("anotherStr");
 char ch = 'a';
 System.out.println((int) ch);
 
+// 문자열을 문자 배열로 변환
+char[] cha = str.toCharArray();
 ```
 
 ### StringBuilder methods
