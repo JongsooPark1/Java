@@ -153,3 +153,20 @@ array5[2] = new int[3]; //정수를 세개 담을 수 있는 배열을 생성해
 int[][] array6 = {{1}, {2,3}, {4,5,6}};
 //위와 같이 선언할 경우 array6[0][0] 는 1이다. array6[1][0]은 2이다.
 ```
+
+### BigInteger
+
+long으로도 정수를 다 표현 못하는 경우가 있다. 이 때 사용하는 것이 BigInteger이며 자릿수의 제한 없다
+
+```Java
+// 사용법. 객체를 사용한다
+BigInteger big = new BigInteger("number");
+
+// 연산
+// String과 마찬가지로 immutable하기 때문에 연산 후 값을 따로 저장해두어야 한다
+// 부호를 사용하지 않고 method를 사용하는데 여러가지가 있으며, 이 때 괄호 안의 타입은 BigInteger이어야 연산이 가능하다
+// 괄호 안의 쓸 수 있는 값으로는 BigInteger.valueOf(number) 또는 상수가 있다.
+// 상수는 BigInteger.ZERO, BigInteger.ONE, BigInteger.TEN이 있다
+big = big.substract(BigInteger.valueOf(number));
+big = big.add(BigInteger.ONE);
+```
