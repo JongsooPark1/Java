@@ -75,6 +75,10 @@ str.contains("anotherStr");
 char ch = 'a';
 System.out.println((int) ch);
 
+// ascii 넘버, 문자로 강제 변환하면 문자로 출력된다
+int one = 65;
+System.out.println((char) one);
+
 // 문자열을 문자 배열로 변환
 char[] cha = str.toCharArray();
 
