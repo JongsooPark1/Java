@@ -71,11 +71,11 @@ str.trim();
 // 문자열 있는지 확인, true or false로 반환
 str.contains("anotherStr");
 
-// 문자, int로 강제 변환하면 ascii 넘버로 출력된다
+// 문자 -> ascii 넘버
 char ch = 'a';
 System.out.println((int) ch);
 
-// ascii 넘버, 문자로 강제 변환하면 문자로 출력된다
+// ascii 넘버 -> 문자
 int one = 65;
 System.out.println((char) one);
 
