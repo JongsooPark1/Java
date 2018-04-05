@@ -52,17 +52,48 @@ System.out.println(sb);
 
 ### Queue
 
+FIFO (First in, First out)
+
 ```Java
 Queue<Integer> q = new LinkedList<>();
 
 // 뒤에서부터 삽입
-q.offer(1);
+q.add(1);
 
 // 앞에서부터 하나만 빼기(선입선출)
 q.poll();
 
 // 앞에서부터 하나만 보기(먼저 들어간 것 부터), queue에서 제거되지는 않는다. poll()과의 차이
 q.peek();
+```
+
+### Stack
+
+LIFO (Last in, First out)
+
+```Java
+Stack<Integer> st = new Stack<>();
+
+// 앞에서부터 삽입
+st.add(1);
+
+// 뒤에서부터 하나만 빼기(후입선출)
+st.pop();
+```
+
+### Deque
+
+```Java
+Deque<Integer> dq = new ArrayDeque<>();
+
+// 뒤에서부터 삽입
+dq.add(1);
+
+// 먼저 들어감
+dq.addFirst()
+
+// 앞에서부터 하나만 빼기(선입선출)
+q.poll();
 ```
 
 * 참고 사이트
