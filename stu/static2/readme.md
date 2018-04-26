@@ -3,11 +3,17 @@
 
 ### instance method  VS  class method(static method)
 
+*instance field*
 
+> 객체마다 그 값이 다르다면 instatnce field
+
+*static field*
+
+> 공용적인 데이터
 
 *instance method*
 
-> field(전역 변수)에 영향을 주는 함수는 instance method로 사용한다
+> intstance field에 영향을 주는 함수는 instance method로 사용한다
 >
 > instance를 생성한 뒤에 사용할 수 있다
 >
@@ -16,7 +22,7 @@
 
 *class method*
 
-> field에 영향을 주지 않고 어떤 기능을 구현하고자 할 때 class method를 사용한다
+> intstance field에 영향을 주지 않고 어떤 기능을 구현하고자 할 때 class method를 사용한다
 >
 > instance를 생성하지 않고 바로 사용할 수 있다
 >
