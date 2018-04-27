@@ -24,7 +24,7 @@
 
 > intstance field에 영향을 주지 않고 어떤 기능을 구현하고자 할 때 class method를 사용한다
 >
-> instance를 생성하지 않고 바로 사용할 수 있다
+> instance를 생성하지 않고 바로 사용할 수 있다(Class에 직접 접근하여 사용)
 >
 > 외부 클래스의 class method를 사용할 경우, Class.method()로 사용한다
 >
