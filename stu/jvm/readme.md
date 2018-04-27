@@ -155,3 +155,10 @@ i) Old영역에 있는 모든 객체들을 검사
 ii) 참조되지 않은 객체들을 한꺼번에 삭제
 
 iii) Minor Garbage Collection에 비해 시간이 오래 걸리고 실행 중 프로세스가 정지
+
+
+참조
+
+http://hoonmaro.tistory.com/19
+
+http://huelet.tistory.com/entry/JVM-%EB%A9%94%EB%AA%A8%EB%A6%AC%EA%B5%AC%EC%A1%B0
