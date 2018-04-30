@@ -1,7 +1,7 @@
 ## Static
 ---
 
-### instance method  VS  class method(static method)
+### instance VS  static
 
 *instance field*
 
@@ -20,7 +20,7 @@
 > instance method내부에서는 instance method를 호출할 수 있다
 
 
-*class method*
+*class method(static method)*
 
 > intstance field에 영향을 주지 않고 어떤 기능을 구현하고자 할 때 class method를 사용한다
 >

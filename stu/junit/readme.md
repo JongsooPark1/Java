@@ -68,5 +68,5 @@ assertTrue (test());
 assertFalse : return 값이 false인지 확인
 
 ```java
-assertTrue (test());
+assertFalse (test());
 ```
