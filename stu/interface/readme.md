@@ -202,7 +202,7 @@ public void drive(Vehicle vehicle) {
 
 ### 인터페이스 상속
 
-인터페이스는 클래스와 달리 다중 상속을 허용한다
+인터페이스는 클래스와 달리 다중 상속을 허용한다. 또한 인터페이스가 또 다른 인터페이스를 상속할 수 도 있다
 
 ```java
 public interface 하위인터페이스 extends 상위인터페이스1, 상위인터페이스2 {
