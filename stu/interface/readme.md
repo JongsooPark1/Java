@@ -67,7 +67,7 @@ public class RemoteControlExample {
 
 ### 자동 타입 변환(Promotion)
 
-인터페이스 : A / 구현 클래스 : B, C / 자식 클래스 : D, E
+인터페이스 : A / 구현 클래스 : B, C / 구현 클래스의 자식 클래스 : D, E
 
 ```java
 A a1 = new B();
@@ -181,7 +181,7 @@ public class Main {
     //vehicle.checkFare(); 불가능
     Bus bus = (Bus) vehicle;
     bus.run();
-    bus.vehicle();  // 가능
+    bus.checkFare();  // 가능
   }
 }
 ```
