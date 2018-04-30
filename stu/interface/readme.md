@@ -14,6 +14,15 @@
 
 1. Abstract method
 
+추상 클래스의 추상 메서드와 마찬가지로 {} 붙지 않는다. 차이는 interface에서는 abstract 키워드가 따로 붙지 않는다는 것. 구현 클래스에서 꼭 대응하는 실체 method 작성되어야 한다. 없으면 컴파일 에러
+
+```java
+public interface RemoteControl {
+  public void turnOn();
+  public void turnOff();
+}
+```
+
 2. Default method (java 8 추가)
 
 default 키워드가 리턴 타입 앞에 붙는다. interface에 선언되지만 사실은 구현 객체가 가지고 있는 instance method라고 생각해야 한다. 존재 이유는 기존 interface를 확장해서 새로운 기능을 추가하기 위해서. 예를 들어 기존의 방법으론 나중에 interface에 메소드를 추가 할 경우, 구현 클래스에도 새로운 메소드를 추가해야 컴파일 에러 발생하지 않는다. 하지만 default method로 추가한다면 구현 클래스에 추가하지 않아도 에러가 발생하지 않는다
