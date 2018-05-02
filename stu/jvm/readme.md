@@ -9,10 +9,10 @@
 >
 > 자바의 가장 큰 장점 중의 하나인 "Write once, run anywhere" 특성을 보이지만, JVM에 의해 기계어로 번역되고 실행되기 때문에 C나 C++의 컴파일 단계에서 만들어지는 완전한 기계어보다는 속도가 느리다는 단점을 가지고 있다. 하지만 JVM 내부의 JIT 컴파일러를 통해 속도의 격차가 많이 줄어들고 있다
 >
-> 
+>
 
-![22](/Users/PJS/Desktop/github/java/stu/jvm/jvm_exe.png)
 
+![0](./jvm_exe.png)
 
 
 ### JAVA 프로그램의 실행 구조
