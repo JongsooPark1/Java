@@ -11,7 +11,7 @@
 >
 > 
 
-![](/Users/PJS/Desktop/github/java/stu/jvm/jvm_exe.png)
+![22](/Users/PJS/Desktop/github/java/stu/jvm/jvm_exe.png)
 
 
 
