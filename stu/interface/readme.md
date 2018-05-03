@@ -41,7 +41,7 @@ default void setMute(boolean mute) {
 
 ### 구현 클래스
 
-interface에 선언된 abstract method에 대응하는 실체 method를 구현 클래스가 작성하지 않으면, 구현 클래스는 자동적으로 추상 클래스가 된다. 그렇기 때문에 클래스 선언부에 abstract 키워드를 추가해야 한다
+interface에 선언된 abstract method에 대응하는 실체 method를 구현 클래스가 작성하지 않으면, 구현 클래스는 자동적으로 추상 클래스가 된다
 
 
 ### 익명 구현 객체
