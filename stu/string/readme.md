@@ -126,3 +126,16 @@ sb.insert(시작 index, "anotherStr");
 // 이외의 메소드 length(), indexOf() 등 String과 겹치는 것들이 많다.
 
 ```
+
+
+
+### Buffer 사용 방법
+
+참조
+
+백준 15552 내 code
+
+https://www.acmicpc.net/board/view/9744
+
+http://snacky.tistory.com/10
+
