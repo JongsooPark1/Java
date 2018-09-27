@@ -203,3 +203,19 @@ BigInteger big = new BigInteger("number");
 big = big.substract(BigInteger.valueOf(number));
 big = big.add(BigInteger.ONE);
 ```
+
+
+
+### 실행 시간 측정
+
+```java
+long start = System.currentTimeMillis(); //시작하는 시점 계산
+ 
+/*
+실행시간을 측정하고싶은 코드
+*/
+ 
+long end = System.currentTimeMillis(); //프로그램이 끝나는 시점 계산
+System.out.println( "실행 시간 : " + ( end - start ) / 1000.0 + "초"); //실행 시간 계산 및 출력
+```
+
