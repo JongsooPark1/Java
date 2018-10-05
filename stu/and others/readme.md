@@ -168,6 +168,21 @@ Math.ceil(value);
 Math.floor(value);
 ```
 
+
+
+### 소수 표현
+
+```java
+int r = 5;
+double s = Math.PI * r * r;
+// 소수 7번째 자리에서 반올림
+System.out.printf("%.6f", s);
+```
+
+
+
+
+
 ### 2차원 배열 값 넣기
 
 * 가변크기의 2차원 배열을 생성하는 방법
