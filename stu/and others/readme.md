@@ -83,6 +83,8 @@ st.pop();
 
 ### Deque
 
+기본적으로는 FIFO
+
 ```Java
 Deque<Integer> dq = new ArrayDeque<>();
 
@@ -92,8 +94,11 @@ dq.add(1);
 // 먼저 들어감
 dq.addFirst()
 
-// 앞에서부터 하나만 빼기(선입선출)
+// 앞에서부터 하나만 빼기
 q.poll();
+
+// 뒤에서부터 하나만 빼기
+q.pollLast();
 ```
 
 * 참고 사이트
