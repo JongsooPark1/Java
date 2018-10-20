@@ -139,3 +139,19 @@ try {
   e.printStackTrace();
 }
 ```
+
+
+
+### 자주 사용하는 숫자 확인 예외처리
+
+```java
+public static boolean isNumber(String s) {
+		try {
+			Integer.parseInt(s);
+			return true;
+		} catch(NumberFormatException e) {
+			return false;
+		}
+}
+```
+
