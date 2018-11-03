@@ -114,6 +114,8 @@ new 연산자로 생성된 객체와 배열을 저장하는 공간
 
 Garbage Collector를 통해 메모리 반환
 
+</br>
+
 i) Permanent Generation
 - 생성된 객체들의 정보의 주소 값이 저장된 공간
 
@@ -197,6 +199,10 @@ i) Old영역에 있는 모든 객체들을 검사
 ii) 참조되지 않은 객체들을 한꺼번에 삭제
 
 iii) Minor Garbage Collection에 비해 시간이 오래 걸리고 실행 중 프로세스가 정지
+
+</br>
+
+</br>
 
 
 참조
