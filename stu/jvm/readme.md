@@ -1,6 +1,4 @@
 ## JVM (Java Virtual Machine)
----
-
 > 운영체제는 자바 프로그램을 바로 실행할 수 없는데, 그 이유는 자바 프로그램은 완전한 기계어가 아닌, 중간 단계의 바이트 코드이기 때문에 이것을 해석하고 실행할 수 있는 가상의 운영체제가 필요하다 -> JVM
 >
 > 따라서 운영체제에 무관하게 동일한 자바 프로그램을 개발할 수 있다(C와의 큰 차이, JAVA 이전에는 virtual machine아니다)
@@ -8,21 +6,33 @@
 > 바이트 코드는 모든 JVM에서 동일한 실행 결과를 보장하지만, JVM은 운영체제에 종속적이다. 따라서 JAVA 프로그램을 운영체제가 이해하는 기계어로 번영해서 실행해야 하므로 JVM은 운영체제에 맞게 설치되어야 한다
 >
 > 자바의 가장 큰 장점 중의 하나인 "Write once, run anywhere" 특성을 보이지만, JVM에 의해 기계어로 번역되고 실행되기 때문에 C나 C++의 컴파일 단계에서 만들어지는 완전한 기계어보다는 속도가 느리다는 단점을 가지고 있다. 하지만 JVM 내부의 JIT 컴파일러를 통해 속도의 격차가 많이 줄어들고 있다
->
->
+
+</br>
 
 
 ![0](./jvm_exe.png)
 
+</br>
+
+</br>
 
 ### JAVA 프로그램의 실행 구조
 
+</br>
+
 ![1](./jvmexe.png)
 
+</br>
+
+</br>
 
 ### 자바프로그램 실행 과정과 JVM메모리 구조
 
+</br>
+
 ![2](./jvm_struct.png)
+
+</br>
 
 프로그램이 실행되면, JVM은 OS으로부터 이 프로그램이 필요로 하는 메모리를 할당받고, JVM은 이 메모리를 용도에 따라 여러 영역으로 나누어 관리한다
 
@@ -33,14 +43,19 @@
 - Runtime Data Area : 프로그램을 수행하기 위해 OS에서 할당 받은 메모리 공간
 - Garbage Collector: JVM은 Garbage Collector를 통해 메모리 관리 기능을 자동으로 수행한다. 애플리케이션이 생성한 객체의 생존 여부를 판단하여 더 이상 사용되지 않는 객체를 해제하는 방식으로 메모리를 자동 관리한다.
 
+</br>
 
-
+</br>
 
 ### Runtime Data Area
+
+</br>
 
 ***Class area***
 
 ![3](./classarea.png)
+
+</br>
 
 Method Area, Code Area, Static Area 로 불리어짐
 
@@ -72,17 +87,22 @@ vi) Class 사용 이전에 메모리 할당
 
 - final class 변수의 경우(상수로 치환되어) 상수 풀에 값 복사
 
+</br>
+
+</br>
+
 ***Stack area***
 
 ![4](./stack_area.png)
 
 - Last In First Out (LIFO)
-
 - 메서드 호출 시마다 각각의 스택프레임(그 메서드만을 위한 공간)이 생성
-
 - 메서드 안에서 사용되어지는 값들 저장, 호출된 메서드의 매개변수, 지역변수, 리턴 값 및 연산 시 일어나는 값들을 임시로 저장
-
 - 메서드 수행이 끝나면 프레임별로 삭제
+
+</br>
+
+</br>
 
 ***Heap area***
 
@@ -103,22 +123,34 @@ ii) New Area
 
 iii) Old Area : New Area에서 일정시간이상 참조되고 있는 객체들이 저장되는 공간
 
+</br>
+
+</br>
+
 ***Native method stack area***
 
 
 - 자바 외의 다른 언어에서 제공되는 메서드들이 저장되는 공간
+
+</br>
+
+</br>
 
 
 ***PC Register***
 
 
 - Thread가 생성 될 때마다 생성되는 공간
-
 - Thread가 어떤 부분을 어떤 명령으로 실행할 지에 대한 기록
-
 - 현재 실행되는 부분의 명령과 주소를 저장
 
+</br>
+
+</br>
+
 ### Garbage Collection
+
+</br>
 
 
 - 참조되지 않은 객체들을 탐색 후 삭제
@@ -127,7 +159,9 @@ iii) Old Area : New Area에서 일정시간이상 참조되고 있는 객체들�
 
 - Heap 메모리의 재사용
 
+</br>
 
+</br>
 
 ***Minor Garbage Collection***
 
@@ -151,7 +185,9 @@ viii) 일정시간이상 참조되고 있는 객체들을 Old영역으로 이동
 
 ix) 반복
 
+</br>
 
+</br>
 
 ***Major Garbage Collection (Full Garbage Collection)***
 
