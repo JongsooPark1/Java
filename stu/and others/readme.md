@@ -1,5 +1,5 @@
 ## and others
----
+</br>
 
 ### nextInt() 사용시 주의할 점
 
@@ -26,16 +26,27 @@ static int getHowManyManual() {
 	}
 ```
 
+</br>
+
+</br>
+
 ### System.getProperty("line.separator")
 
 운영 체제에 따라 개행 문자는 달라질 수 있다. 따라서 위와 같은 명령어를 이용한다
 
 안될시, \r\n or (\r ? \n) or (\\r ? \\n) 사용해보기
 
+</br>
+
+</br>
 
 ### import static utils.StringUtils.appendNewLine;
 
 이는 utils 패키지의 StringUtils 클래스에 있는 appendNewLine 메소드를 다른 패키지 또는 다른 클래스에서 자유롭게 사용할 수 있게 한다
+
+</br>
+
+</br>
 
 ### StringBuilder
 
@@ -49,6 +60,10 @@ System.out.println(sb);
 출력 결과 : Will Park
 
 즉, StringBuilder를 생성하면 append와 같은 여러 String 조작 메소드 및 필드를 사용할 수 있다
+
+</br>
+
+</br>
 
 ### Queue
 
@@ -67,6 +82,10 @@ q.poll();
 q.peek();
 ```
 
+</br>
+
+</br>
+
 ### Stack
 
 LIFO (Last in, First out)
@@ -80,6 +99,10 @@ st.add(1);
 // 뒤에서부터 하나만 빼기(후입선출)
 st.pop();
 ```
+
+</br>
+
+</br>
 
 ### Deque
 
@@ -106,6 +129,61 @@ q.pollLast();
 https://msdn.microsoft.com/en-us/library/system.text.stringbuilder.aspx
 
 http://www.dreamy.pe.kr/zbxe/CodeClip/158356
+
+</br>
+
+</br>
+
+### priority queue
+
+```java
+import java.util.*;
+
+public class Main7 {
+	public static void main(String[] args) {
+        // 순서 결정한다
+		PriorityQueue<Prisoner> pq = new PriorityQueue<>(Collections.reverseOrder());
+		pq.add(new Prisoner(3, "hoho"));
+		pq.add(new Prisoner(1, "koko"));
+		pq.add(new Prisoner(-4, "lolo"));
+		pq.add(new Prisoner(0, "bobo"));
+		pq.add(new Prisoner(1, "bobo"));
+		while(!pq.isEmpty()) {
+			System.out.println(pq.poll().getName());
+		}
+	}
+}
+
+class Prisoner implements Comparable<Prisoner>{
+	private int years;
+	private String name;
+	
+	public Prisoner(int years, String name) {
+		super();
+		this.years = years;
+		this.name = name;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+
+    // 꼭 해줘야함
+	@Override
+	public int compareTo(Prisoner target) {
+		if (this.years > target.years) {
+            return 1;
+        } else if (this.years < target.years) {
+            return -1;
+        }
+        return 0;
+	}
+}
+```
+
+</br>
+
+</br>
 
 ### next()와 nextLine()의 차이
 
@@ -147,15 +225,27 @@ while (s.hasNext()) {
 
 http://bing9blog.com/java-scanner-next-nextline%EC%B0%A8%EC%9D%B4%EC%99%80-%EC%9E%85%EB%A0%A5%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0%EB%B2%95/
 
+</br>
+
+</br>
+
 ### hasNext()와 hasNextLine()의 차이
 
 hasNextLine() checks to see if there is another linePattern in the buffer
 
 hasNext() checks to see if there is a parseable token in the buffer, as separated by the scanner's delimiter
 
+</br>
+
+</br>
+
 ### int의 범위
 
--10억 ~ 10억
+-2^32 ~ (2^32 - 1). 32bit이니까. 0은 양수에 포함시켜서 양수의 최대값의 절대값이 음수의 최소값의 절대값보다 1작다
+
+</br>
+
+</br>
 
 ### 절대값, 반올림, 버림, 올림
 
@@ -173,7 +263,9 @@ Math.ceil(value);
 Math.floor(value);
 ```
 
+</br>
 
+</br>
 
 ### 소수 표현
 
@@ -184,9 +276,9 @@ double s = Math.PI * r * r;
 System.out.printf("%.6f", s);
 ```
 
+</br>
 
-
-
+</br>
 
 ### 2차원 배열 값 넣기
 
@@ -207,6 +299,10 @@ int[][] array6 = {{1}, {2,3}, {4,5,6}};
 //위와 같이 선언할 경우 array6[0][0] 는 1이다. array6[1][0]은 2이다.
 ```
 
+</br>
+
+</br>
+
 ### BigInteger
 
 long으로도 정수를 다 표현 못하는 경우가 있다. 이 때 사용하는 것이 BigInteger이며 자릿수의 제한 없다
@@ -224,7 +320,9 @@ big = big.substract(BigInteger.valueOf(number));
 big = big.add(BigInteger.ONE);
 ```
 
+</br>
 
+</br>
 
 ### 실행 시간 측정
 
